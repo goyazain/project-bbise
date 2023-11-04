@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - BBISE</title>
+    <script src="https://kit.fontawesome.com/572e24cddf.js" crossorigin="anonymous"></script>
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('background.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background-image: url('hero-background.jpg');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;margin-top: -5rem;
+        }
+
+        .hero h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #fff;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            
+        }
+
+        .cta-button:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Quick Links Styles */
+        .quick-links {
+            margin: 0 auto;
+            width: 70%;
+            background: #f2f2f2;
+            border: 2px solid #632c65;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        .quick-header {
+            background: #632c65;
+            color: #fff;
+            font-size: 24px;
+            font-family: 'josefin sans', sans-serif;
+            padding: 10px;
+        }
+
+        .links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .links li {
+            padding: 10px 0;
+        }
+
+        .anchor-links {
+            text-decoration: none;
+            color: #632c65;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .anchor-links:hover {
+            color: hotpink;
+        }
+
+        /* Events Styles */
+        .events-container {
+            margin-top: 10rem;
+        }
+
+        .eventh1 {
+            text-align: center;
+            font-size: 5rem;
+        }
+
+        .event {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+        }
+
+        .event h1 {
+            font-size: 24px;
+        }
+
+        .event p {
+            font-size: 16px;
+        }
+
+        .event img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .event {
+                margin: 10px;
+            }
+
+            .eventh1 {
+                font-size: 2rem;
+                margin-left: 2rem;
+            }
+
+            .event p {
+                font-size: 14px;
+            }
+        }
+
+
+        /* Testimonials Styles */
+        .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* Style for individual testimonials */
+        .testimonial {
+            text-align: center;
+            padding: 30px;
+            margin-bottom: 2rem;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            width: 80%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Style for circular customer image */
+        .customer-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 10px;
+            border: 3px solid #3498db;
+        }
+
+        .customer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .testimonial p {
+            font-size: 16px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .customer-name {
+            font-weight: bold;
+            font-size: 16px;
+            color: #3498db;
+            margin-top: 10px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .testimonial-container {
+                width: 80%;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+            .testimonial-container {
+                align-items: center;
+            }
+
+            .testimonial p {
+                font-size: 15px;
+            }
+
+        }
+
+
+        .team-section {
+            background-color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .team-member {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .team-member img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .team-member h3 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .team-member p {
+            font-size: 16px;
+        }
+
+        /* Media query for responsive design */
+        @media (max-width: 768px) {
+            .team-member {
+                margin: 20px 0;
+            }
+        }
+
+        /* Footer Styles */
+        .footer {
+            color: #fff;
+            padding: 20px 0;
+            width: 100%;
+            background-color: #333;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-column {
+            flex: 1;
+            text-align: center;
+            margin: 0 20px;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .address {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        ul li a:hover {
+            color: hotpink;
+        }
+
+        .social-icons {
+            font-size: 24px;
+        }
+
+        .social-icons a {
+            font-size: 1rem;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .phone {
+            text-align: center;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+
+
+
+
+
+        .wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(-135deg, #c850c0, #4158d0);
+            clip-path: circle(25px at calc(100% - 45px) 45px);
+            transition: all 0.3s ease-in-out;
+        }
+
+        #active:checked~.wrapper {
+            clip-path: circle(75%);
+        }
+
+        .menu-btn {
+            position: absolute;
+            z-index: 2;
+            right: 20px;
+            top: 20px;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+            background: linear-gradient(-135deg, #c850c0, #4158d0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        #active:checked~.menu-btn {
+            background: #fff;
+            color: #4158d0;
+        }
+
+        #active:checked~.menu-btn i:before {
+            content: "\f00d";
+        }
+
+        .wrapper ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            list-style: none;
+            text-align: center;
+        }
+
+        .wrapper ul li {
+            margin: 15px 0;
+        }
+
+        .wrapper ul li a {
+            color: none;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 5px 20px;
+            color: #fff;
+            position: relative;
+            line-height: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .wrapper ul li a:after {
+            position: absolute;
+            content: "";
+            background: #fff;
+            width: 100%;
+            height: 50px;
+            left: 0;
+            border-radius: 50px;
+            transform: scaleY(0);
+            z-index: -1;
+            transition: transform 0.3s ease;
+        }
+
+        .wrapper ul li a:hover:after {
+            transform: scaleY(1);
+        }
+
+        .wrapper ul li a:hover {
+            color: #4158d0;
+        }
+
+        .wrapper .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #2c3e50;
+            min-width: 160px;
+            z-index: 1;
+            margin-top: 5px;
+            border-radius: 0 0 5px 5px;
+        }
+
+        .wrapper ul li:hover .dropdown-content {
+            display: block;
+        }
+
+        .wrapper .dropdown-content a {
+            color: #ecf0f1;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .wrapper .dropdown-content a:hover {
+            background-color: #e74c3c;
+        }
+
+        .dropdown-arrow {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+            line-height: 50px;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+
+
+        /*pop up message*/
+        .popup {
+            display: none;
+            position: fixed;
+            margin-left: -2rem;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+<script>
+           
+
+         // Function to close the popup
+         function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        // Display the popup after 3 seconds
+        setTimeout(function() {
+            document.getElementById('popup').style.display = 'block';
+            // Automatically close the popup after 3 seconds
+            setTimeout(closePopup, 5000);
+        }, 5000);
+</script>
+
+    <div class="popup" id="popup" style="padding: 2rem;">
+        <div class="popup-content" style="padding: 2rem;">
+            <span class="close" id="closePopup">&times;</span>
+            <h1 style="padding: 2rem;">Important Message</h1>
+            <p>
+                
+                This is not officaical site of BBISE. This is made for practice. <br>
+
+                All the rights reserved to - Zain Ul Abideen Goya
+
+            </p> 
+            <h2 style="padding: 2rem;"> Contact Me on WhatsApp</h2>
+            <img style="width: 50%; height: 50%;" src="shared_qr_code.png" alt="" srcset="">
+        </div>
+    </div>
+
+
+
+
+    <!-- Navigation Bar -->
+    <div class="logo" style="background-color: #edeff1; display: flex;">
+    <img src="biselogo.png" alt="logo image" style="width: 20%; height: 20%;">
+    <span style="margin-top: 1rem; text-align: center;">Balochistan Board of Intermediate & Secondary Education Quetta</span>
+</div>
+
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+    <div class="wrapper">
+        <ul>
+            <li>
+                <a href="#">Online Services</a>
+                <span class="dropdown-arrow">
+                    <i class="fa-sharp fa-solid fa-caret-down" style="margin-top: 2rem;"></i>
+                </span>
+                <div class="dropdown-content">
+                    <a href="./online/gen-challan.html">Generate Challan </a>
+                    <a href="./online/online.html"> Apply Online </a>
+                    <a href="#">Tracking Application</a>
+                </div>
+            </li>
+            <li><a href="result.html">Result</a></li>
+            <li><a href="./gallery/gallery.html">Gallery</a></li>
+            <li><a href="./notification/notification.html">Notifications</a></li>
+            <li><a href="syllabus.html">Syallabus</a></li>
+            <li><a href="about.html">Explore</a></li>
+            <li><a href="./history/history.html">History</a></li>
+            <li><a href="about-dev.html">About Developer</a></li>
+            <li><a href="./institute/institute.html">Institute Login</a></li>
+        </ul>
+    </div>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 style="margin-top: 1rem;">Welcome to BBISE Website</h1>
+        <p style="margin-top: 1rem;">Greetings! Have a great day</p>
+        <a style="margin-top: 1rem;" href="about.html" class="cta-button">About us</a>
+    </section>
+
+    <!-- Quick Links Section -->
+    <div class="quick-links">
+        <div class="quick-header">
+            <p>Quick Links</p>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a class="anchor-links" href="./online/online.html">Online Apply</a></li>
+                <li><a class="anchor-links" href="./online/tracking.html"> Tracking Application</a></li>
+                <li><a class="anchor-links" href="result.html">Check Result</a></li>
+                <li><a class="anchor-links" href="./online/gen-challan.html"> Generate Challan</a></li>
+                <li><a class="anchor-links" href="criteria.html">Criteria</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Events Section -->
+    <div class="events-container">
+        <h1 class="eventh1">Events</h1>
+        <div class="event">
+            <h1>Independence Day</h1>
+            <img src="flag.jpg" alt="Independence Day" />
+            <p>Independence Day is celebrated on August 14th to commemorate Pakistan's independence from British rule in
+                1947.
+                It's a national holiday with various cultural events and flag hoisting ceremonies.</p>
+        </div>
+
+        <div class="event">
+            <h1>Allama Iqbal Day</h1>
+            <img src="iqbal.jpg" alt="Allama Iqbal Day" />
+            <p>Allama Iqbal Day is celebrated on November 9th to honor the birthday of Allama Iqbal, a renowned
+                philosopher,
+                poet, and politician. It's a day to celebrate his contributions to the nation.</p>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonial-container">
+        <h1 style="padding-top: 3rem; padding-bottom: 5%;">Testemonial</h1>
+        <div class="testimonial">
+            <div class="customer-image">
+                <img src="https://source.unsplash.com/720x360/?customer" alt="pic 1">
+            </div>
+            <p>"I had a great experience with this company. Their products are top-notch!"</p>
+            <p class="customer-name">- Zain</p>
+        </div>
+        <div class="testimonial">
+            <div class="customer-image">
+                <img src="https://source.unsplash.com/4000x2667/?client" alt="pic 2">
+            </div>
+            <p>"The service here is excellent. I highly recommend them to everyone!"</p>
+            <p class="customer-name">- Goya</p>
+        </div>
+        <!-- Add more testimonials as needed -->
+    </div>
+
+    <!-- Our Team Section -->
+
+    <section class="team-section">
+        <h1 class="headings" style="text-align: center; font-size: 2rem; margin: 0; padding: 0;">Our Team</h1>
+        <div style="background-color: #edeff1; border-radius: 10px; padding: 2rem; margin: 1rem;">
+            <img class="customer-image" style="object-fit: cover;" src="https://source.unsplash.com/720x360/?chairman"
+                alt="Team Member 1">
+            <h3>Mr. ABC </h3>
+            <p>Chairman</p>
+        </div>
+
+        <div style="background-color: #edeff1; border-radius: 10px; padding: 2rem; margin: 1rem;">
+            <img class="customer-image" style="object-fit: cover;" src="https://source.unsplash.com/720x360/?principle"
+                alt="Team Member 1">
+            <h3>Mr. ABC </h3>
+            <p>Acadmic Cordinator</p>
+        </div>
+
+        <div style="background-color: #edeff1; border-radius: 10px; padding: 2rem; margin: 1rem;">
+            <img class="customer-image" style="object-fit: cover;" src="https://source.unsplash.com/720x360/?peon"
+                alt="Team Member 1">
+            <h3>Mr. ABC </h3>
+            <p>Examination Controller</p>
+        </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <address>
+                        Balochistan Board of Intermediate &<br>
+                        Secondary Education <br>
+                        Samungli Road, Quetta, Pakistan.
+                    </address>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="./history/history.html">About Us</a></li>
+                        <li><a href="./online/online.html">Registration</a></li>
+                        <li><a href="syllabus.html">Syllabus</a></li>
+                        <li><a href="about.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-envelope"></a>
+                        <a href="#" class="fa fa-phone"></a>
+                    </div>
+                </div>
+            </div><br>
+            <div class="phone">
+                081-923987 <br>
+                dummyemail65@gmail.com <br>
+                Samungli Road, Benazir Park Quetta, Balochistan. Pakistan
+            </div>
+        </div>
+    </footer>
+    <script>
+        const menuIcon = document.querySelector(".menu-icon");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuIcon.addEventListener("click", function () {
+            if (navLinks.style.display === "flex") {
+                navLinks.style.display = "none";
+            } else {
+                navLinks.style.display = "flex";
+            }
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

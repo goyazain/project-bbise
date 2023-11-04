@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Challan</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://kit.fontawesome.com/572e24cddf.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .challan-form {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="text"],
+        input[type="text"] {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+         /* Footer Styles */
+ .footer {
+  background-color: #333;
+  width: 100%;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-footer, .mid-footer, .right-footer {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+.left-footer p, .left-footer h3 {
+  margin: 0;
+}
+
+.right-footer h3 {
+  margin: 10px 0;
+}
+
+.mid-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mid-footer ul li {
+  margin: 5px 0;
+}
+
+.mid-footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.mid-footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.right-footer {
+  display: inline-block;
+  margin: 8px;
+  padding: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .left-footer, .mid-footer, .right-footer {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .left-footer p, .left-footer h3 {
+    margin: 0;
+  }
+  
+  .right-footer h3 {
+    margin: 10px 0;
+  }
+  
+  .mid-footer ul li {
+    margin: 5px 0;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="challan-form">
+        <h2>Generate Challan</h2>
+        <form id="challanForm">
+            <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" name="studentName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fatherName">Father's Name</label>
+                <input type="text" id="fatherName" name="fatherName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cnicNumber">CNIC Number</label>
+                <input type="text" id="cnicNumber" name="cnicNumber" required>
+            </div>
+
+            <div class="form-group">
+                <label for="registrationNumber">Registration Number</label>
+                <input type="text" id="registrationNumber" name="registrationNumber" required>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Reason of</label>
+                <select id="course" name="course" required>
+                    <option value="Mathematics">Duplicate DMC</option>
+                    <option value="Science">Attestion</option>
+                    <option value="Arts">Eligibiity</option>
+                    <option value="">SSC Registration</option>
+                    <option value="">HSSC Registration</option>
+                    <option value="">8 Registration</option>
+                    <option value="">NOC</option>
+                    
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Challan Amount (PKR)</label>
+                <input type="number" id="amount" name="amount" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn">Generate Challan</button>
+            </div>
+        </form>
+    </div>
+    <!--- Footer -->
+<footer class="footer">
+    <div class="left-footer">
+      <h3>Contact Us</h3>
+      <p>Balochistan BISE</p>
+      <p>Samungli Road</p>
+      <p>Quetta, Pakistan</p>
+    </div>
+    <div class="mid-footer">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Registration</a></li>
+        <li><a href="#">Syllabus</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="right-footer">
+      <h3>Follow Us</h3>
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-envelope"></i>
+      <i class="fa fa-phone"></i>
+    </div>
+  </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script>
+        document.getElementById('challanForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const studentName = document.getElementById('studentName').value;
+            const fatherName = document.getElementById('fatherName').value;
+            const cnicNumber = document.getElementById('cnicNumber').value;
+            const registrationNumber = document.getElementById('registrationNumber').value;
+            const course = document.getElementById('course').value;
+            const amount = document.getElementById('amount').value;
+
+            // Create a new PDF document
+            const doc = new jsPDF();
+
+            // Add content to the PDF
+            doc.text(`Challan Form`, 105, 10, 'center');
+            doc.text(`Student Name: ${studentName}`, 10, 30);
+            doc.text(`Father's Name: ${fatherName}`, 10, 40);
+            doc.text(`CNIC Number: ${cnicNumber}`, 10, 50);
+            doc.text(`Registration Number: ${registrationNumber}`, 10, 60);
+            doc.text(`Reason of: ${course}`, 10, 70);
+            doc.text(`Challan Amount (PKR): $${amount}`, 10, 80);
+
+            // Save the PDF as a downloadable file
+            doc.save('BBISE-challan.pdf');
+        });
+    </script>
+</body>
+</html>

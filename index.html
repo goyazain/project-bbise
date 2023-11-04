@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Home - BBISE </title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/page-layout.css">
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css'>
+  <script src="https://kit.fontawesome.com/572e24cddf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+  <script>
+    //popup message
+    window.onload = function() {
+    document.getElementById('popup').style.display = 'block';
+};
+
+document.getElementById('closePopup').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none';
+});
+</script>
+
+<div class="popup" id="popup" style="padding: 2rem;">
+<div class="popup-content" style="padding: 2rem;">
+    <span class="close" id="closePopup">&times;</span>
+    <h1 style="padding: 2rem;">Important Message</h1>
+    <p>
+        
+        This is not officaical site of BBISE. This is made for practice. <br>
+
+        All the rights reserved to - Zain Ul Abideen Goya
+
+    </p> 
+    <h2 style="padding: 2rem;"> Contact Me on WhatsApp</h2>
+    <img style="width: 50%; height: 50%;" src="shared_qr_code.png" alt="" srcset="">
+</div>
+</div>
+
+
+  <main class="cd_main">
+    <div class="sidebar close">
+      <ul class="nav-links">
+        <li class="active">
+          <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <span class="link_name">Home</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="index.html">Home</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="#">
+              <i class="fa-solid fa-globe"></i>
+              <span class="link_name">Online Services</span>
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#">Online Services</a></li>
+            <li><a href="./online/gen-challan.html">Generate Challan</a></li>
+            <li><a href="./online/online.html">Apply Online</a></li>
+            <li><a href="./online/tracking.html">Track Application</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="">
+            <a href="result.html" target="_blank">
+              <i class="fa-solid fa-check"></i>
+              <span class="link_name">Results</span>
+            </a>
+            <ul class="sub-menu blank">
+              <li><a class="link_name" href="result.html">Result</a></li>
+            </ul>
+          </div>
+
+        </li>
+        <li>
+          <a href="./gallery/gallery.html">
+            <i class="fa-regular fa-image"></i>
+            <span class="link_name">Gallery</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="./gallery/gallery.html">Gallery</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="./notification/notification.html">
+            <i class="fa-solid fa-bell"></i>
+            <span class="link_name">Notification</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="./notification/notification.html">Notification</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <div class="iocn-link">
+            <a href="syllabus.html" target="_blank">
+              <i class="fa-solid fa-book"></i>
+              <span class="link_name">Syllabus</span>
+            </a>
+          </div>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="syllabus.html">Syllabus</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="about.html" target="_blank">
+            <i class='bx bx-compass'></i>
+            <span class="link_name">Explore</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a target="_blank" class="link_name" href="about.html">Explore</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="history/history.html" target="_blank">
+            <i class='bx bx-history'></i>
+            <span class="link_name">History</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="history/history.html">History</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="./institute/institute.html" target="_blank">
+            <i class="fa-solid fa-school"></i>
+            <span class="link_name">Institute</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="institute.html">Institute</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <div class="home-content">
+        <i class='bx bx-menu'></i>
+        <span class="logo "><a href="index.html"></a><img class="logo-img" src="biselogo.png" alt="BBISE logo"
+            class="src"></a>
+          <div class="bbise"><br> <b>Balochistan Board of Intermediate and Secondary Education, Quetta.</b></div>
+        </span>
+      </div>
+      <!--  Hero Sec--> <br> <br>
+      <div class="hero">
+        <h1>Welcome to BBISE website!</h1>
+        <p>Learn about BBISE and services.</p>
+        <a href="./online/online.html" class="btn-primary">Online Services</a>
+      </div>
+    </section>
+
+  </main>
+  <!---Quick Links-->
+  <div class="quick-links">
+    <div class="quick-header">
+      <p>Quick Links</p>
+    </div>
+    <div class="links">
+      <ul>
+        <li><a class="anchor-links" href="./online/online.html">Oline Apply</a></li>
+        <li><a class="anchor-links" href="./online/tracking.html">Tracking Application/a></li>
+        <li><a class="anchor-links" href="result.html">Check Result</a></li>
+        <li><a class="anchor-links" href="./online/gen-challan.html"> Generate Challan</a></li>
+        <li><a class="anchor-links" href="criteria.html">  Criteria</a></li>
+        <li><a href="about-dev.html">Developer</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Events -->
+  <div class="events-container">
+    <h1 class="eventh1">Events</h1>
+    <div class="event">
+      <h1>Independence Day</h1>
+      <img src="flag.jpg" alt="Independence Day" />
+      <p>Independence Day is celebrated on August 14th to commemorate Pakistan's independence from British rule in 1947.
+        It's a national holiday with various cultural events and flag hoisting ceremonies.</p>
+    </div>
+
+    <div class="event">
+      <h1>Allama Iqbal Day</h1>
+      <img src="iqbal.jpg" alt="Allama Iqbal Day" />
+      <p>Allama Iqbal Day is celebrated on November 9th to honor the birthday of Allama Iqbal, a renowned philosopher,
+        poet, and politician. It's a day to celebrate his contributions to the nation.</p>
+    </div>
+  </div><br><br>
+  <!-- Team Sec-->
+  <div class="team">
+
+    <div class="container-block container2">
+      <p class="text-blk team-head-text">
+        <span class="ot"> Our Team</span>
+      </p>
+      <div class="responsive-container-block teamcard-container">
+        <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+          <div class="team-card">
+            <div class="team-img-wrapper">
+              <img class="team-img" src="https://source.unsplash.com/1280x720/?mountain">
+            </div>
+            <div class="team-card-content">
+              <p class="text-blk name">
+                Ijaz Baloch
+              </p>
+              <p class="text-blk position">
+                Chairman
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+          <div class="team-card">
+            <div class="team-img-wrapper">
+              <img class="team-img" src="https://source.unsplash.com/1280x720/?mountain">
+            </div>
+            <div class="team-card-content">
+              <p class="text-blk name">
+                Ijaz Baloch
+              </p>
+              <p class="text-blk position">
+                Chairman
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="responsive-cell-block wk-desk-3 wk-mobile-12 wk-tab-4 wk-ipadp-4 team-card-container">
+          <div class="team-card">
+            <div class="team-img-wrapper">
+              <img class="team-img" src="https://source.unsplash.com/1280x720/?mountain">
+            </div>
+            <div class="team-card-content">
+              <p class="text-blk name">
+                Ijaz Baloch
+              </p>
+              <p class="text-blk position">
+                Chairman
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--- Testemonial -->
+  <div class="testimonial-container">
+    <h1 style="padding-bottom: 3rem;">Testemonial</h1>
+    <div class="testimonial">
+      <div class="customer-image">
+        <img src="https://source.unsplash.com/720x360/?customer" alt="pic 1">
+      </div>
+      <p>"I had a great experience with this company. Their products are top-notch!"</p>
+      <p class="customer-name">- Zain</p>
+    </div>
+    <div class="testimonial">
+      <div class="customer-image">
+        <img src="https://source.unsplash.com/4000x2667/?client" alt="pic 2">
+      </div>
+      <p>"The service here is excellent. I highly recommend them to everyone!"</p>
+      <p class="customer-name">- Goya</p>
+    </div>
+    <!-- Add more testimonials as needed -->
+  </div>
+  <!--- Footer -->
+  <footer class="footer">
+    <div class="container-footer">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <address>
+            Balochistan Board of Intermediate &<br>
+            Secondary Education <br>
+            Samungli Road, Quetta, Pakistan.
+          </address>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="./history/history.html">About Us</a></li>
+            <li><a href="./online/online.html">Registration</a></li>
+            <li><a href="syllabus.html">Syllabus</a></li>
+            <li><a href="about.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-envelope"></a>
+            <a href="#" class="fa fa-phone"></a>
+          </div>
+        </div>
+      </div><br>
+      <div class="phone">
+        081-923987 <br>
+        dummyemail65@gmail.com <br>
+        Samungli Road, Benazir Park Quetta, Balochistan. Pakistan
+      </div>
+    </div>
+  </footer>
+  <!-- Script JS -->
+
+  <script src="./js/script.js"></script>
+
+</body>
+
+</html>

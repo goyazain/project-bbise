@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Syllabus</title>
+    <script src="https://kit.fontawesome.com/572e24cddf.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 32px;
+        }
+
+        .syllabus {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .tabs {
+            display: flex;
+            background-color: #333;
+            border-radius: 10px;
+        }
+
+        .tab {
+            cursor: pointer;
+            padding: 10px 20px;
+            color: white;
+            border: 2px solid transparent;
+            border-radius: 10px 10px 0 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .tab:hover {
+            background-color: #555;
+        }
+
+        .content-item {
+            display: none;
+            padding: 20px;
+        }
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+            }
+            .tab {
+                flex: 1;
+                border-radius: 0;
+            }
+        }
+        /* Footer Styles */
+        .footer {
+  color: #fff;
+  padding: 20px 0;  
+  width: 100%;
+  background-color: #333;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.footer-column h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.address {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+ul li a:hover {
+  color: hotpink;
+}
+
+.social-icons {
+  font-size: 24px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.phone{
+  text-align: center;
+   width: 100%;
+    font-size: 1rem;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h2>BBISE Syllabus</h2>
+        <p style="font-size: 1.5rem;">Explore our syllabus</p>
+    </header>
+<!-- 8th sec-->
+    <div class="syllabus">
+        <h2>8th Class</h2>
+        <div class="tabs">
+            <div class="tab" id="tab1">English</div>
+            <div class="tab" id="tab2">Urdu</div>
+            <div class="tab" id="tab3">Mathematics</div>
+            <div class="tab" id="tab4">Pak Study</div>
+            <div class="tab" id="tab5">Islamiat</div>
+        </div>
+
+        <div class="content-item" id="content1">
+            <h3>English</h3>
+            <ul>
+                <li>Lesson 1: Grammar and Punctuation</li>
+                <li>Lesson 2: Creative Writing</li>
+                <li>Lesson 3: Reading Comprehension</li>
+                <li>Lesson 5: Preposition</li>
+                <li>Lesson 6: Narrations</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content2">
+            <h3>Urdu</h3>
+            <ul>
+                <li>Lesson 1: Nazm and Ghazal</li>
+                <li>Lesson 2: Urdu Prose</li>
+                <li>Lesson 3: Urdu Grammar</li>
+                <li>Lesson 4: Nazm and Ghazal</li>
+                <li>Lesson 5: Urdu Prose</li>
+                <li>Lesson 6: Urdu Grammar</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content3">
+            <h3>Mathematics</h3>
+            <ul>
+                <li>Lesson 1: Algebra</li>
+                <li>Lesson 2: Geometry</li>
+                <li>Lesson 3: Arithmetic</li>
+                <li>Lesson 4: Algebra</li>
+                <li>Lesson 5: Geometry</li>
+                <li>Lesson 6: Arithmetic</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content4">
+            <h3>Pak Study</h3>
+            <ul>
+                <li>Lesson 1: History of Pakistan</li>
+                <li>Lesson 2: Geography of Pakistan</li>
+                <li>Lesson 3: Culture and Heritage</li>
+                <li>Lesson 4: History of Pakistan</li>
+                <li>Lesson 5: Geography of Pakistan</li>
+                <li>Lesson 6: Culture and Heritage</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content5">
+            <h3>Islamiat</h3>
+            <ul>
+                <li>Lesson 1: Islamic Beliefs</li>
+                <li>Lesson 2: Quranic Studies</li>
+                <li>Lesson 3: Life of the Prophet</li>
+                <li>Lesson 4: Islamic Beliefs</li>
+                <li>Lesson 5: Quranic Studies</li>
+                <li>Lesson 6: Life of the Prophet</li>
+            </ul>
+        </div>
+    </div>
+
+<!-- 9th sec-->
+    <div class="syllabus">
+        <h2>SSC Part-I</h2>
+        <div class="tabs">
+            <div class="tab" id="tab1">English</div>
+            <div class="tab" id="tab2">Urdu</div>
+            <div class="tab" id="tab3">Mathematics</div>
+            <div class="tab" id="tab4">Pak Study</div>
+            <div class="tab" id="tab5">Islamiat</div>
+        </div>
+
+        <div class="content-item" id="content1">
+            <h3>English</h3>
+            <ul>
+                <li>Lesson 1: Grammar and Punctuation</li>
+                <li>Lesson 2: Creative Writing</li>
+                <li>Lesson 3: Reading Comprehension</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content2">
+            <h3>Urdu</h3>
+            <ul>
+                <li>Lesson 1: Nazm and Ghazal</li>
+                <li>Lesson 2: Urdu Prose</li>
+                <li>Lesson 3: Urdu Grammar</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content3">
+            <h3>Mathematics</h3>
+            <ul>
+                <li>Lesson 1: Algebra</li>
+                <li>Lesson 2: Geometry</li>
+                <li>Lesson 3: Arithmetic</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content4">
+            <h3>Pak Study</h3>
+            <ul>
+                <li>Lesson 1: History of Pakistan</li>
+                <li>Lesson 2: Geography of Pakistan</li>
+                <li>Lesson 3: Culture and Heritage</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content5">
+            <h3>Islamiat</h3>
+            <ul>
+                <li>Lesson 1: Islamic Beliefs</li>
+                <li>Lesson 2: Quranic Studies</li>
+                <li>Lesson 3: Life of the Prophet</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 10th sec-->
+    <div class="syllabus">
+        <h2>SSC Part-II</h2>
+        <div class="tabs">
+            <div class="tab" id="tab1">English</div>
+            <div class="tab" id="tab2">Urdu</div>
+            <div class="tab" id="tab3">Mathematics</div>
+            <div class="tab" id="tab4">Pak Study</div>
+            <div class="tab" id="tab5">Islamiat</div>
+        </div>
+
+        <div class="content-item" id="content1">
+            <h3>English</h3>
+            <ul>
+                <li>Lesson 1: Grammar and Punctuation</li>
+                <li>Lesson 2: Creative Writing</li>
+                <li>Lesson 3: Reading Comprehension</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content2">
+            <h3>Urdu</h3>
+            <ul>
+                <li>Lesson 1: Nazm and Ghazal</li>
+                <li>Lesson 2: Urdu Prose</li>
+                <li>Lesson 3: Urdu Grammar</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content3">
+            <h3>Mathematics</h3>
+            <ul>
+                <li>Lesson 1: Algebra</li>
+                <li>Lesson 2: Geometry</li>
+                <li>Lesson 3: Arithmetic</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content4">
+            <h3>Pak Study</h3>
+            <ul>
+                <li>Lesson 1: History of Pakistan</li>
+                <li>Lesson 2: Geography of Pakistan</li>
+                <li>Lesson 3: Culture and Heritage</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content5">
+            <h3>Islamiat</h3>
+            <ul>
+                <li>Lesson 1: Islamic Beliefs</li>
+                <li>Lesson 2: Quranic Studies</li>
+                <li>Lesson 3: Life of the Prophet</li>
+            </ul>
+        </div>
+    </div>
+   
+     <!-- 1st year sec-->
+     <div class="syllabus">
+        <h2>HSSC Part-I</h2>
+        <div class="tabs">
+            <div class="tab" id="tab1">English</div>
+            <div class="tab" id="tab2">Urdu</div>
+            <div class="tab" id="tab3">Mathematics</div>
+            <div class="tab" id="tab4">Pak Study</div>
+            <div class="tab" id="tab5">Islamiat</div>
+        </div>
+
+        <div class="content-item" id="content1">
+            <h3>English</h3>
+            <ul>
+                <li>Lesson 1: Grammar and Punctuation</li>
+                <li>Lesson 2: Creative Writing</li>
+                <li>Lesson 3: Reading Comprehension</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content2">
+            <h3>Urdu</h3>
+            <ul>
+                <li>Lesson 1: Nazm and Ghazal</li>
+                <li>Lesson 2: Urdu Prose</li>
+                <li>Lesson 3: Urdu Grammar</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content3">
+            <h3>Mathematics</h3>
+            <ul>
+                <li>Lesson 1: Algebra</li>
+                <li>Lesson 2: Geometry</li>
+                <li>Lesson 3: Arithmetic</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content4">
+            <h3>Pak Study</h3>
+            <ul>
+                <li>Lesson 1: History of Pakistan</li>
+                <li>Lesson 2: Geography of Pakistan</li>
+                <li>Lesson 3: Culture and Heritage</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content5">
+            <h3>Islamiat</h3>
+            <ul>
+                <li>Lesson 1: Islamic Beliefs</li>
+                <li>Lesson 2: Quranic Studies</li>
+                <li>Lesson 3: Life of the Prophet</li>
+            </ul>
+        </div>
+    </div>
+    
+      <!-- 2nd year sec-->
+      <div class="syllabus">
+        <h2>HSSC Part-II</h2>
+        <div class="tabs">
+            <div class="tab" id="tab1">English</div>
+            <div class="tab" id="tab2">Urdu</div>
+            <div class="tab" id="tab3">Mathematics</div>
+            <div class="tab" id="tab4">Pak Study</div>
+            <div class="tab" id="tab5">Islamiat</div>
+        </div>
+
+        <div class="content-item" id="content1">
+            <h3>English</h3>
+            <ul>
+                <li>Lesson 1: Grammar and Punctuation</li>
+                <li>Lesson 2: Creative Writing</li>
+                <li>Lesson 3: Reading Comprehension</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content2">
+            <h3>Urdu</h3>
+            <ul>
+                <li>Lesson 1: Nazm and Ghazal</li>
+                <li>Lesson 2: Urdu Prose</li>
+                <li>Lesson 3: Urdu Grammar</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content3">
+            <h3>Mathematics</h3>
+            <ul>
+                <li>Lesson 1: Algebra</li>
+                <li>Lesson 2: Geometry</li>
+                <li>Lesson 3: Arithmetic</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content4">
+            <h3>Pak Study</h3>
+            <ul>
+                <li>Lesson 1: History of Pakistan</li>
+                <li>Lesson 2: Geography of Pakistan</li>
+                <li>Lesson 3: Culture and Heritage</li>
+            </ul>
+        </div>
+
+        <div class="content-item" id="content5">
+            <h3>Islamiat</h3>
+            <ul>
+                <li>Lesson 1: Islamic Beliefs</li>
+                <li>Lesson 2: Quranic Studies</li>
+                <li>Lesson 3: Life of the Prophet</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container-footer">
+          <div class="footer-content">
+            <div class="footer-column">
+              <h3>Contact Us</h3>
+              <address>
+                Balochistan Board of Intermediate &<br>
+                  Secondary Education <br>
+                Samungli Road, Quetta, Pakistan.
+              </address>
+            </div>
+            <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="./history/history.html">About Us</a></li>
+                <li><a href="./online/hssc.html">Registration</a></li>
+                <li><a href="syllabus.html">Syllabus</a></li>
+                <li><a href="about.html">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-envelope"></a>
+                <a href="#" class="fa fa-phone"></a>
+              </div>
+            </div>
+          </div><br>
+          <div class="phone">
+            081-923987 <br> 
+            dummyemail65@gmail.com <br>
+            Samungli Road, Benazir Park Quetta, Balochistan. Pakistan
+          </div>
+        </div>
+      </footer>
+    <script>
+        // JavaScript to handle tab switching
+        const tabs = document.querySelectorAll('.tab');
+        const contentItems = document.querySelectorAll('.content-item');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                // Hide all content items
+                contentItems.forEach((item) => {
+                    item.style.display = 'none';
+                });
+
+                // Show the selected content item
+                contentItems[index].style.display = 'block';
+            });
+        });
+
+        // Initially, display the first tab's content in each section
+        contentItems[0].style.display = 'block';
+    </script>
+</body>
+</html>

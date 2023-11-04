@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Tracking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .tracking-form {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .tracking-form h1 {
+            color: #4CAF50;
+        }
+
+        .form-group {
+            margin: 20px 0;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #status {
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="tracking-form">
+        <h1>Application Tracking</h1>
+        <form id="trackingForm">
+            <div class="form-group">
+                <label for="applicationID">Application ID</label>
+                <input type="text" id="applicationID" name="applicationID" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn">Track Application</button>
+            </div>
+        </form>
+
+        <div id="result">
+            <h3>Application Status:</h3>
+            <p id="status">Status will be displayed here.</p>
+        </div>
+    </div>
+    <script>
+        const trackingForm = document.getElementById('trackingForm');
+        const resultDiv = document.getElementById('result');
+        const statusParagraph = document.getElementById('status');
+
+        trackingForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Simulate tracking logic here (replace with your own application status logic)
+            const applicationID = trackingForm.applicationID.value;
+            const status = simulateStatus(applicationID);
+
+            // Display the result
+            statusParagraph.textContent = status;
+            resultDiv.style.display = 'block';
+        });
+
+        // Simulated function to fetch application status
+        function simulateStatus(applicationID) {
+            // Replace this with your own logic to fetch application status
+            if (Math.random() < 0.5) {
+                return 'In Progress';
+            } else {
+                return 'Completed';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Board Result Page</title>
+    <script src="https://kit.fontawesome.com/572e24cddf.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+           margin-left: 35%;
+        }
+        @media only screen and (max-width: 768px){
+            .container{
+                margin-left: 15%;
+            }
+        }
+        @media only screen and (max-width: 500px){
+            .container{
+                margin-left: 3%;
+                width: 90%;
+            }
+        }
+        .result-container {
+            background-color: #fff;
+            border-radius: 10px;          
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+        }
+
+        input[type="text"],
+        select {
+            width: 60%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #resultDetails {
+            margin-top: 20px;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            .result-container {
+                max-width: 90%;
+            }
+        }
+         /* Footer Styles */
+.footer {
+  color: #fff;
+  padding: 20px 0;  
+  width: 100%;
+  background-color: #333;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.footer-column h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.address {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+ul li a:hover {
+  color: hotpink;
+}
+
+.social-icons {
+  font-size: 24px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.phone{
+  text-align: center;
+   width: 100%;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .left-footer, .mid-footer, .right-footer {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .left-footer p, .left-footer h3 {
+    margin: 0;
+  }
+  
+  .right-footer h3 {
+    margin: 10px 0;
+  }
+  
+  .mid-footer ul li {
+    margin: 5px 0;
+  }
+}
+</style>
+</head>
+<body>
+    <br><br><br>
+    <div class="container">
+    <div class="result-container">
+        <h1>Check Balochistan Board Exam Results</h1>
+        <label for="searchType">Search by:</label>
+        <select id="searchType">
+            <option value="rollNumber">Roll Number</option>
+            <option value="name">Name</option>
+        </select>
+        <label for="searchField">Enter Roll Number or Name:</label>
+        <input type="text" id="searchField" placeholder="Enter Roll Number or Name">
+        <label for="selectClass">Select Class:</label>
+        <select id="selectClass">
+            <option value="">Select class</option>
+            <option value="8th">8<sup>th</sup></option>
+            <option value="9th">SSC-I</option>
+            <option value="10th">SSC-II</option>
+            <option value="1st Year">HSSC-I</option>
+            <option value="2nd Year">HSSC-II</option>
+        </select>
+        <label for="selectYear">Select year:</label>
+        <select id="selectYear">
+            <option value="year3">2023</option>
+            <option value="year2">2022</option>
+            <option value="year1">2021</option>
+            <option value="year0">2020</option>
+            <option value="year9">2019</option>
+        </select><br>
+        <button id="searchButton">Search</button>
+        <div id="resultDetails"></div>
+    </div>
+<br><br><br>
+</div>
+<!--- Footer -->
+<footer class="footer">
+  <div class="container-footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <address>
+          Balochistan Board of Intermediate &<br>
+            Secondary Education <br>
+          Samungli Road, Quetta, Pakistan.
+        </address>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./history/history.html">About Us</a></li>
+          <li><a href="./online/hssc.html">Registration</a></li>
+          <li><a href="syllabus.html">Syllabus</a></li>
+          <li><a href="about.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-envelope"></a>
+          <a href="#" class="fa fa-phone"></a>
+        </div>
+      </div>
+    </div><br>
+    <div class="phone">
+      081-923987 <br> 
+      dummyemail65@gmail.com <br>
+      Samungli Road, Benazir Park Quetta, Balochistan. Pakistan
+    </div>
+  </div>
+</footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchButton = document.getElementById("searchButton");
+            const resultDetails = document.getElementById("resultDetails");
+            const searchType = document.getElementById("searchType");
+            const searchField = document.getElementById("searchField");
+
+            searchButton.addEventListener("click", function () {
+                const searchValue = searchField.value;
+                const selectedClass = document.getElementById("selectClass").value;
+
+                // Simulate fetching result details from a database
+                // In a real system, you'd make an AJAX request to a server to get the data
+                const resultData = {
+                    name: "Zain",
+                    fatherName: "Barkat Ali",
+                    rollNumber: "1234",
+                    score: 92,
+                    grade: "A+"
+
+                };
+                
+
+                if (searchType.value === "rollNumber" && resultData.rollNumber === searchValue) {
+                    // Display the result details
+                    resultDetails.innerHTML = `
+                        <p>Name: ${resultData.name}</p>
+                        <p>Father Name: ${resultData.fatherName}</p>
+                        <p>Roll Number: ${resultData.rollNumber}</p>
+                        <p>Score: ${resultData.score}</p>
+                        <p>Grade: ${resultData.grade}</p>
+                        <p>Class: ${selectedClass}</p>
+                    `;
+                } else if (searchType.value === "name" && resultData.name.toLowerCase() === searchValue.toLowerCase()) {
+                    // Display the result details
+                    resultDetails.innerHTML = `
+                        <p>Name: ${resultData.name}</p>
+                        <p>Father Name: ${resultData.fatherName}</p>
+                        <p>Roll Number: ${resultData.rollNumber}</p>
+                        <p>Score: ${resultData.score}</p>
+                        <p>Grade: ${resultData.grade}</p>
+                        <p>Class: ${selectedClass}</p>
+                    `;
+                } else {
+                    resultDetails.innerHTML = `<p>Result not found. Please check your input.</p>`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
